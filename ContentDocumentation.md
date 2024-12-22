@@ -1,5 +1,75 @@
+## Measuring Performance in Linear Regression Models
 
-## Measuring PErformance in Classification Models
+**Measures of Error**
+
+![image](https://github.com/user-attachments/assets/7c30c60f-bde0-4516-8c83-b6734f912b1f)
+
+- Mean Squared Error (MSE)
+
+**Theoretical Explanation:** 
+   - MSE measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual values. It is a measure of the quality of an estimator—it is always non-negative, and values closer to zero are better.
+   - MSE is a robust measure of accuracy that punishes larger errors more significantly, making it useful when big mistakes are particularly undesirable.
+
+![image](https://github.com/user-attachments/assets/0c6ea079-6314-4d42-83e9-00979e0b749e)
+
+- Root Mean Squared Error (RMSE)
+
+**Theoretical Explanation:** 
+   - RMSE is the square root of the mean of the square of all of the error. It is a measure that is used to quantify the difference between values predicted by a model and the values observed.
+   - RMSE is the square root of the average of the square of all of the errors. It provides an estimate of the magnitude of the error. By taking the square root of MSE, RMSE lowers the sensitivity to outliers compared to MSE and is on the same scale as the data, making interpretation straightforward.
+
+![image](https://github.com/user-attachments/assets/7c06ed45-5414-4aae-8037-92de9458673f)
+
+- Mean Absolute Error (MAE)
+
+**Theoretical Explanation:** 
+- MAE measures the average magnitude of the errors in a set of predictions, without considering their direction. It’s the average over the test sample of the absolute differences between prediction and actual observation where all individual differences have equal weight.
+
+![image](https://github.com/user-attachments/assets/b7893d9b-548a-4472-ab3a-4a1332c58d70)
+
+- Mean Absolute Percentage Error (MAPE)
+
+**Theoretical Explanation:**
+   - MAPE measures the size of the error in percentage terms. It is calculated as the average of the unsigned percentage error.
+   - It is intuitive for understanding the relative magnitude of the prediction errors.
+
+![image](https://github.com/user-attachments/assets/cecbe50b-e172-41f7-af1d-8dd3b8d0efc0)
+
+![image](https://github.com/user-attachments/assets/5b487988-3a4b-40a9-b459-05510c91a32a)
+
+**Measure of Explained Variance**
+- R² (Coefficient of Determination)
+
+**Theoretical Explanation:**
+   - R-squared is a statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model. It indicates how well data fit a statistical model – more specifically, a line. R-squared values range from 0 to 1 and are often expressed as percentages. A higher R-squared percentage reflects a model that explains a higher proportion of the variance.
+
+![image](https://github.com/user-attachments/assets/93f580d8-d50d-4868-b2cd-08587e6c4ae6)
+
+- Adjusted R²
+
+**Theoretical Explanation:**
+   - Adjusted R-squared also indicates how well terms fit a curve or line but adjusts for the number of terms in a model. Unlike R-squared, adjusted R-squared increases only if a new term improves the model more than would be expected by chance. It accounts for the number of predictors in the model and can help to prevent overfitting by penalizing excessive use of non-contributing predictors.
+
+![image](https://github.com/user-attachments/assets/76f4ca6d-e5b0-4f2e-a6a5-e830f65035c0)
+
+![image](https://github.com/user-attachments/assets/d778e84b-f99d-435f-bd8e-9ca058ba2cc5)
+
+**Model Selection Criteria**
+- Akaike Information Criterion (AIC)
+
+**Theoretical Explanation:** 
+   - AIC is a criterion for model selection among a finite set of models. It is founded on information theory: it offers an estimate of the relative amount of information lost by a given model: the less information a model loses, the higher the quality of that model. AIC deals with the trade-off between the goodness of fit of the model and the complexity of the model.
+
+![image](https://github.com/user-attachments/assets/c9aafb40-6cf7-4eed-bb3e-ff160f960a56)
+
+- Bayesian Information Criterion (BIC)
+
+***Theoretical Explanation:**
+   - BIC is similar to AIC but with a stronger penalty for including additional variables in the model. It is also based on information theory, but it adds a penalty term for the number of parameters in the model. This makes BIC more stringent about including unnecessary variables, thus it tends to penalize complex models more than AIC.
+
+![image](https://github.com/user-attachments/assets/8aaa9603-2ac4-4342-8ed1-6ff0af799323)
+
+## Measuring Performance in Classification Models
 **Class-probability based metrics**
 * Log-likelihood: the probability of observing the given data under a specific model. In the context of classification, it assesses how probable the observed class labels are, given the predicted probabilities from the model.
 
